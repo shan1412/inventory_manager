@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    /* text-align: center; */
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    }
+.menu-toggle {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.menu {
+    width: 250px;
+    background-color: #f4f4f4;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    overflow-y: auto;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+.menu.open {
+    left: 0;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+.menu-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.content {
+    width: 100%;
+    /* margin-left: 250px;
+    padding: 20px; */
+}
+
+.loader-div-main{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: #6a696757;
+}
+.loader-div-circle{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; /* ensure it's above the overlay */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+#username {
+    margin-right: 10px; /* Adjust spacing between username and dropdown */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: 0; /* Align the dropdown menu to the right */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.user-info:hover .dropdown-menu {
+    display: block;
+}
+
